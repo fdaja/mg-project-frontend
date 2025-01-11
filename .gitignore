@@ -9,7 +9,8 @@
 /coverage
 
 # production
-/build
+# Commented out the build folder to include it in version control
+# /build
 
 # misc
 .DS_Store
