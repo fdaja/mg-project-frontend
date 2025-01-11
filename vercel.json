@@ -6,12 +6,11 @@
       }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/build/$1" }
-    ]
-  }
-
-  
-  {
+      {
+        "src": "/(.*)",
+        "dest": "/build/$1"
+      }
+    ],
     "rewrites": [
       {
         "source": "/(.*)",
