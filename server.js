@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000; // Use Vercel's assigned port or 5000 locally
 
 // Middleware
 app.use(cors());
@@ -34,13 +34,12 @@ app.post('/api/register', (req, res) => {
   res.status(201).json({ message: 'User registered successfully', user: newUser });
 });
 
+// View all registered users
+app.get('/api/users', (req, res) => {
+  res.json(users);
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-// View all registered users
-app.get('/api/users', (req, res) => {
-    res.json(users);
-  });
-  
