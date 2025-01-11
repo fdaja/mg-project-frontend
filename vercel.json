@@ -1,10 +1,4 @@
 {
-    "builds": [
-      {
-        "src": "build/**",
-        "use": "@vercel/static"
-      }
-    ],
     "rewrites": [
       {
         "source": "/(.*)",
